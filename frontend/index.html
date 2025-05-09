@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,58 +9,90 @@
     <!--my style-->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="media_query.css" />
-    <!---->
+
+    <!--aos animation-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
+
 <body>
 
-    <!--====================================== Home section starts here =====================================-->
+    <!--====================================== Navbar section starts here =====================================-->
     <nav>
-      <div class="logo">
-        <img src="assets/Logo64x64.png" alt="logo" />
-        <h1>TravelEase</h1>
-      </div>
-      <ul>
-        <li>
-          <a href="#">Beranda</a>
-        </li>
-        <li>
-          <a href="#">Destinasi Wisata</a>
-        </li>
-        <li>
-          <a href="#">Aktivitas</a>
-        </li>
-        <li>
-          <a href="#">Tentang Kami</a>
-        </li>
-      </ul>
-      <div class="hamburger">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </div>
+        <div class="logo">
+            <img src="assets/Logo64x64.png" alt="logo" />
+            <h1>TravelEase</h1>
+        </div>
+        <ul>
+            <li>
+                <a href="#">Beranda</a>
+            </li>
+            <li>
+                <a href="#">Destinasi Wisata</a>
+            </li>
+            <li>
+                <a href="#">Aktivitas</a>
+            </li>
+            <li>
+                <a href="#">Tentang Kami</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
     </nav>
     <div class="menubar">
-      <ul>
-        <li>
-          <a href="#">Beranda</a>
-        </li>
-        <li>
-          <a href="#">Destinasi Wisata</a>
-        </li>
-        <li>
-          <a href="#">Aktivitas</a>
-        </li>
-        <li>
-          <a href="#">Tentang Kami</a>
-        </li>
-      </ul>
+        <ul>
+            <li>
+                <a href="#">Beranda</a>
+            </li>
+            <li>
+                <a href="#">Destinasi Wisata</a>
+            </li>
+            <li>
+                <a href="#">Aktivitas</a>
+            </li>
+            <li>
+                <a href="#">Tentang Kami</a>
+            </li>
+        </ul>
     </div>
-    <!--====================================== Home section ends here =====================================-->
+    <!--====================================== Navbar section ends here =====================================-->
 
-    
+    <!--====================================== Home section start ======================================-->
+    <section>
+        <main class="home" id="home">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide" style="background-image: url('img/beach.jpeg');"></div>
+                    <div class="slide" style="background-image: url('img/beach1.jpeg');"></div>
+                    <div class="slide" style="background-image: url('img/beach.jpeg');"></div>
+                </div>
+                <div class="text-content">
+                    <h1>Unleash Your Wanderlust</h1>
+                    <h2>Book Your Next Journey</h2>
+                    <p>Crafting Exceptional Journeys: Your Global Escape Planner. Unleash Your Wanderlust: Seamless
+                        Travel, Extraordinary Adventures.</p>
+                        <button class="search-btn">Mulai Cari</button>
+                </div>
+            </div>
+        </main>
+    </section>
+    <!--====================================== Home section end ======================================-->
+
     <!--my script-->
     <script src="script.js"></script>
-    <!---->
+
+    <!--js aos-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Durasi animasi
+            once: false, // Animasi hanya sekali
+        });
+    </script>
 </body>
+
 </html>

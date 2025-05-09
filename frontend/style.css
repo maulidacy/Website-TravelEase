@@ -137,3 +137,154 @@ nav ul li a:hover {
 
 /*============================= navbar end =============================*/
 
+/*============================= Home start =============================*/
+.slider-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.text-content {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  margin: 30px 30px;
+  transform: translateY(-50%);
+  color: black;
+  text-align: left;
+  padding: 20px;
+}
+
+.text-content h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.text-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #ff6600;
+  border: none;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #ff3300;
+}
+
+/*.slideshow-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+.active {
+  opacity: 1;
+}
+
+.slide1 {
+  background-image: url(img/beach.jpeg);
+}
+
+.slide2 {
+  background-image: url(img/beach1.jpeg);
+}
+
+.slide3 {
+  background-image: url(img/beach.jpeg);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-family: poppins, sans-serif;
+}
+
+.overlay h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-shadow: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.overlay p {
+  font-family: josefin slab;
+  font-size: 1.8rem;
+  font-weight: 100;
+  text-shadow: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.cta-download {
+  display: inline-block;
+  font-size: 15px;
+  color: var(--text-color);
+  text-decoration: none;
+  background-color: transparent;
+  border-radius: 30px;
+  padding: 10px 15px;
+  margin-top: 30px;
+  position: relative;
+  z-index: 10;
+  border: solid var(--brown);
+  font-weight: 400;
+}
+
+.cta-download i {
+  color: var(--text-color);
+  padding: 10px;
+}
+
+.cta-download:hover {
+  background-color: var(--brown);
+  color: var(--text-color);
+  transition: 5s;
+}
+
+.cta-download:hover i,
+.cta-download:active i {
+  color: var(--text-color);
+}*/
+
+/*============================= Hom eend =============================*/
+
