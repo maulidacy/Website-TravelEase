@@ -9,20 +9,34 @@
 
 /*tablet*/
 @media (max-width: 768px) {
-  .slider-container {
+  .home-content {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 
-  .text-content {
+  .home-content-text {
     text-align: center;
-    padding-right: 0;
     margin-bottom: 20px;
-    font-size: 62.5%;
   }
 
-  .image-columns {
-    flex-direction: column;
-    width: 100%;
+  .home-content-text h1 {
+    font-size: 2rem;
+  }
+
+  .home-content-text p {
+    font-size: 1rem;
+  }
+
+  .image-gallery {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+  }
+
+  .image-box {
+    width: 30%;
+    margin: 5px;
   }
 }
+
