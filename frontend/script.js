@@ -7,29 +7,30 @@ const toggleNav = () => {
   mobileNav.classList.toggle("hamburger-active");
 };
 mobileNav.addEventListener("click", () => toggleNav());
-
 //============================== Navbar end ===============================
 
 //============================== slideshow Home section start ===============================
-document.addEventListener('DOMContentLoaded', function() {
-  const slider = document.querySelector('.slider');
-  const slides = document.querySelectorAll('.slide');
-  let currentIndex = 0;
-  const slideCount = slides.length;
-  
-  // Atur lebar slider berdasarkan jumlah slide
-  slider.style.width = `${slideCount * 100}%`;
-  
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % slideCount;
-    updateSlider();
-  }
-  
-  function updateSlider() {
-    const translateValue = -currentIndex * (100 / slideCount);
-    slider.style.transform = `translateX(${translateValue}%)`;
-  }
-  
-  setInterval(nextSlide, 3000);
-});
+function showSlides() {
+        slides[slideIndex].classList.remove("active");
+        slideIndex = (slideIndex + 1) % totalSlides; // Geser ke slide berikutnya
+        slides[slideIndex].classList.add("active");
+
+        // Geser slideshow
+        const slideshowContainer = document.getElementById("slideshow");
+        slideshowContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+
+        setTimeout(showSlides, 5000); // Ganti slide setiap 5 detik
+    }
+
+    showSlides(); // Mulai slideshow
 //============================== slideshow Home section end ===============================
+
+//============================== Form Modal start ===============================
+   function scrollToForm() {
+      // Scroll the page smoothly to the form section
+      document.getElementById("formSection").scrollIntoView({
+        behavior: "smooth", // Smooth scroll
+        block: "start" // Align the top of the section to the top of the viewport
+      });
+    }
+//============================== Form Modal end ===============================

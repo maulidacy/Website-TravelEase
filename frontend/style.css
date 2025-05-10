@@ -13,6 +13,21 @@
   --cream: #ddd4ce;
 }*/
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+/*:root {
+  --primary: #31241e;
+  --bg: #d0b8a8;
+  --second-bg-color: #282828;
+  --text-color: #fff;
+  --main-color: #181818;
+  --background: #f8ede3;
+  --sc: #8d493a;
+  --tc: #f8ede3;
+  --brown: #a44a0d;
+  --cream: #ddd4ce;
+}*/
+
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -26,6 +41,7 @@ body {
 }
 
 /*============================= navbar start =============================*/
+/* Navbar dengan position relative */
 nav {
   padding: 5px 5%;
   display: flex;
@@ -34,16 +50,21 @@ nav {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   z-index: 1;
+  position: relative;
 }
+
+
 nav .logo {
   display: flex;
   align-items: center;
 }
+
 nav .logo img {
   height: 25px;
   width: auto;
   margin-right: 10px;
 }
+
 nav .logo h1 {
   font-size: 1.1rem;
   background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%);
@@ -56,9 +77,11 @@ nav ul {
   list-style: none;
   display: flex;
 }
+
 nav ul li {
   margin-left: 1.5rem;
 }
+
 nav ul li a {
   text-decoration: none;
   color: #000;
@@ -85,9 +108,9 @@ nav ul li a:hover {
   margin: 7px auto;
   transition: all 0.3s ease-in-out;
 }
+
 .hamburger-active {
   transition: all 0.3s ease-in-out;
-  transition-delay: 0.6s;
   transform: rotate(45deg);
 }
 
@@ -119,10 +142,11 @@ nav ul li a:hover {
   height: 100vh;
   padding: 20% 0;
   background: rgba(255, 255, 255);
-  transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in-out;
   z-index: 2;
 }
-.active {
+
+.menubar.active {
   left: 0;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -131,6 +155,7 @@ nav ul li a:hover {
   padding: 0;
   list-style: none;
 }
+
 .menubar ul li {
   margin-bottom: 32px;
 }
@@ -151,103 +176,208 @@ nav ul li a:hover {
 /*============================= navbar end =============================*/
 
 /*============================= Home start =============================*/
-.slider-container {
-  width: 100%;
+.home {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  display: flex;
 }
 
-.slider {
+.slideshow-container {
+  position: relative;
+  height: 100%;
   display: flex;
-  width: 300%;
   transition: transform 1s ease-in-out;
+  flex: 1;
 }
 
 .slide {
-  width: 100%;
-  height: 100vh;
-}
-
-.slide img {
-  width: 100%;
+  min-width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
 }
 
+.active {
+  opacity: 1;
+}
 
-.home-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+.overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-}
-
-.home-content-text {
-  flex: 1;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
   color: white;
-  z-index: 10;
   text-align: left;
-  margin: 30px 30px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.home-content-text h1 {
+.overlay h1 {
   font-size: 3rem;
-  margin-bottom: 0px;
+  margin: 10px 0;
 }
 
-.home-content-text p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+.overlay p {
+  font-size: 1.5rem;
+  margin: 10px 0;
 }
 
-button {
-  padding: 10px 20px;
-  background-color: yellow;
-  border: none;
-  margin-right: 10px;
+.cta-download {
+  display: inline-block;
   font-size: 1rem;
-  cursor: pointer;
-  border-radius: 20px;
+  color: white;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: orange;
+.cta-download:hover {
+  background-color: #0056b3;
 }
-
 .image-gallery {
-  width: 20%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  z-index: 10;
-  margin: 30px 30px;
+  gap: 10px;
 }
 
 .image-box {
-  margin: 10px 0;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
   border: 2px solid #ccc;
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
-}
-
-.image-box:hover {
-  border: 2px solid yellow;
+  width: 170px;
+  height: 100px;
 }
 
 .image-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s;
 }
 
+.image-box img:hover {
+  transform: scale(1.1);
+}
 /*============================= Home end =============================*/
+
+/*============================= Form Modal start =============================*/
+.open-form-btn {
+  background-color: #FFAA00;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  margin-top: 20px;
+  display: block;
+  margin: 50px auto;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.open-form-btn:hover {
+  background-color: #FF8C00;
+}
+
+.form-section {
+  display: block;
+  padding: 40px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-width: 600px;
+  margin: 50px auto;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin-top: 50px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+label {
+  font-size: 16px;
+  margin: 10px 0 5px;
+  display: block;
+  color: #555;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.activities {
+  margin-bottom: 20px;
+}
+
+.activities label {
+  display: block;
+  font-size: 14px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+button[type="reset"],
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button[type="reset"] {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+button[type="reset"]:hover {
+  background-color: #ddd;
+}
+
+button[type="submit"] {
+  background-color: #FFAA00;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #FF8C00;
+}
+/*============================= Form Modal end =============================*/
+
 
 
