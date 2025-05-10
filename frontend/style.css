@@ -452,53 +452,72 @@ button[type="submit"]:hover {
   font-size: 0.9rem;
 }
 
-.categories {
-  display: flex;
-  overflow: hidden;
-  /* Menyembunyikan elemen yang melampaui batas */
-  position: relative;
-  margin: 20px 0;
-}
 
-.category-wrapper {
-  display: flex;
-  animation: scroll 20s linear infinite;
-  /* Animasi scrolling */
-}
+        .categories {
+            display: flex;
+            overflow: hidden;
+            margin: 20px 0;
+            position: relative; /* Untuk posisi relatif */
+            align-items: center; /* Rata tengah */
+        }
 
-.category-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  width: 200px;
-  /* Lebar tetap untuk kategori */
-  position: relative;
-  /* Untuk posisi relatif */
-  overflow: hidden;
-}
+        .category-wrapper {
+            display: flex;
+            animation: scroll 30s linear infinite; /* Animasi scrolling */
+        }
 
-.category-image {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
+        .category-card {
+            background-color: white;
+            border-radius: 45%; /* Membuat kategori bulat */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            width: 150px; /* Diameter kategori */
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+        }
 
-.category-title {
-  padding: 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-}
+        .category-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
+        .category-title {
+            padding: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
 
-  100% {
-    transform: translateX(-100%);
-  }
-}
+        .category-info {
+            margin-top: 5px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); } /* Ubah ini untuk mengatur panjang scroll */
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Menyembunyikan tautan di layar kecil */
+            }
+
+            .tour-card {
+                width: calc(50% - 20px); /* 2 kolom di layar kecil */
+            }
+
+            .category-card {
+                width: calc(45% - 20px); /* Lebar kategori di layar kecil */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tour-card, .category-card {
+                width: calc(100% - 20px); /* 1 kolom di layar sangat kecil */
+            }
+        }
 
 /*============================= Our Featured Tours end =============================*/
