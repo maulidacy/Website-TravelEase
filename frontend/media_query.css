@@ -58,26 +58,22 @@
   /*------------Home end------------*/
 
   /*------------Form start------------*/
-  .form-section {
-    width: 90%;
-    padding: 20px;
-  }
-
-  .form-container {
-    width: 100%;
-  }
-
-  .form-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  button[type="reset"],
-  button[type="submit"] {
-    width: 100%;
-    margin-top: 10px;
-  }
-
+  .inputForm-container, .resultContainer {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .filter-group {
+        flex-direction: column;
+    }
+    
+    .filter-item {
+        width: 100%;
+    }
+    
+    .recommendation-list {
+        grid-template-columns: 1fr;
+    }
   /*------------Form end------------*/
 
   /*------------our featured tours start------------*/

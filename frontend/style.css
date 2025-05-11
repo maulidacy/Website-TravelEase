@@ -13,21 +13,6 @@
   --cream: #ddd4ce;
 }*/
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
-
-/*:root {
-  --primary: #31241e;
-  --bg: #d0b8a8;
-  --second-bg-color: #282828;
-  --text-color: #fff;
-  --main-color: #181818;
-  --background: #f8ede3;
-  --sc: #8d493a;
-  --tc: #f8ede3;
-  --brown: #a44a0d;
-  --cream: #ddd4ce;
-}*/
-
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -274,113 +259,256 @@ nav ul li a:hover {
 /*============================= Home end =============================*/
 
 /*============================= Form Modal start =============================*/
-.open-form-btn {
-  background-color: #FFAA00;
-  border: none;
-  padding: 15px 30px;
-  font-size: 16px;
-  cursor: pointer;
-  color: white;
-  margin-top: 20px;
-  display: block;
-  margin: 50px auto;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+.inputForm-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.open-form-btn:hover {
-  background-color: #FF8C00;
+.resultContainer {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
 }
 
-.form-section {
-  display: block;
-  padding: 40px;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  position: relative;
-  max-width: 600px;
-  margin: 50px auto;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  margin-top: 50px;
-}
-
-.form-container {
-  display: flex;
-  flex-direction: column;
+.inputForm-container h1, .resultContainer h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #333;
-  text-align: center;
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
 }
 
 label {
-  font-size: 16px;
-  margin: 10px 0 5px;
-  display: block;
-  color: #555;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
 }
 
-input,
-select,
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
 textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
+    min-height: 100px;
+    resize: vertical;
 }
 
-textarea {
-  resize: vertical;
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.activities {
-  margin-bottom: 20px;
+.submit-btn:hover {
+    background-color: #2980b9;
 }
 
-.activities label {
-  display: block;
-  font-size: 14px;
+/* Result Section Styles */
+.header-section {
+    margin-bottom: 30px;
 }
 
-.form-buttons {
-  display: flex;
-  justify-content: space-between;
+.summary-card {
+    display: flex;
+    justify-content: space-between;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
 }
 
-button[type="reset"],
-button[type="submit"] {
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
-  transition: background-color 0.3s ease;
+.summary-item {
+    text-align: center;
+    flex: 1;
 }
 
-button[type="reset"] {
-  background-color: #f5f5f5;
-  color: #333;
+.summary-label {
+    display: block;
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 5px;
 }
 
-button[type="reset"]:hover {
-  background-color: #ddd;
+.summary-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
 }
 
-button[type="submit"] {
-  background-color: #FFAA00;
-  color: white;
+/* Filter Section Styles */
+.filter-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
 }
 
-button[type="submit"]:hover {
-  background-color: #FF8C00;
+.filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filter-item {
+    flex: 1;
+    min-width: 150px;
+}
+
+.filter-btn {
+    padding: 12px 20px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-end;
+}
+
+.filter-btn:hover {
+    background-color: #27ae60;
+}
+
+/* Recommendation List Styles */
+.recommendation-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.recommendation-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.recommendation-card:hover {
+    transform: translateY(-5px);
+}
+
+.recommendation-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.recommendation-content {
+    padding: 15px;
+}
+
+.recommendation-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.recommendation-location {
+    display: flex;
+    align-items: center;
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.recommendation-price {
+    font-weight: 600;
+    color: #e74c3c;
+    margin-bottom: 8px;
+}
+
+.recommendation-rating {
+    display: flex;
+    align-items: center;
+    color: #f39c12;
+    font-weight: 500;
+}
+
+.recommendation-category {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.category-hemat {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.category-standar {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.category-mewah {
+    background-color: #f8d7da;
+    color: #721c24;
 }
 
 /*============================= Form Modal end =============================*/
+
+/*============================= Recommendation List start =============================*/
+.navigation-recomendation {
+    background-color: #4a4a4a; /* Warna latar belakang */
+    padding: 10px 20px; /* Padding untuk spasi */
+    height: 70px;
+}
+
+.nav-link {
+    color: white; /* Warna teks */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    font-size: 18px; /* Ukuran font */
+    display: flex; /* Flexbox untuk menyusun elemen */
+    align-items: center; /* Vertikal center */
+}
+
+.arrow {
+    margin-right: 10px; /* Spasi antara panah dan teks */
+    font-size: 40px;
+}
+/*============================= Recommendation List end =============================*/
 
 /*============================= Our Featured Tours start =============================*/
 .container-our-featured {

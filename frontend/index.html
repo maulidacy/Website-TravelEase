@@ -23,7 +23,7 @@
         </div>
         <ul>
             <li>
-                <a href="#">Beranda</a>
+                <a href="#home">Beranda</a>
             </li>
             <li>
                 <a href="#">Destinasi Wisata</a>
@@ -44,7 +44,7 @@
     <div class="menubar">
         <ul>
             <li>
-                <a href="#">Beranda</a>
+                <a href="#home">Beranda</a>
             </li>
             <li>
                 <a href="#">Destinasi Wisata</a>
@@ -60,7 +60,7 @@
     <!--====================================== Navbar section ends here =====================================-->
 
     <!--====================================== Home section start ======================================-->
-    <section class="home">
+    <section class="home" id="home">
         <div class="slideshow-container" id="slideshow">
             <div class="slide slide1 active" style="background-image: url('img/beach.jpeg');"></div>
             <div class="slide slide2" style="background-image: url('img/beach1.jpeg');"></div>
@@ -70,7 +70,7 @@
             <div>
                 <h1>Unleash Your Wanderlust</h1>
                 <p>Book Your Next Journey</p>
-                <a href="#" class="cta-download">Mulai Cari</a>
+                <a href="#input-container" class="cta-download">Mulai Cari</a>
             </div>
             <!-- Image Gallery -->
             <div class="image-gallery image-gallery-inside">
@@ -118,49 +118,58 @@
     <!--====================================== Home section end ======================================-->
 
     <!--====================================== Form Modal start ======================================-->
-
-    <!-- Section for the form -->
-    <section id="formSection" class="form-section">
-        <div class="form-container">
-            <h2>Pengaturan Anggaran dan Aktivitas</h2>
-            <form>
-                <label for="budget">Total Budget</label>
-                <input type="text" id="budget" name="budget" placeholder="Masukkan total budget selama liburan..."
-                    required>
-
-                <label for="duration">Durasi Liburan</label>
-                <select id="duration" name="duration">
-                    <option value="1 hari">1 hari</option>
-                    <option value="2 hari">2 hari</option>
-                    <option value="3 hari">3 hari</option>
-                    <option value="lebih">Lebih dari 3 hari</option>
+    <section>
+        <div class="inputForm-container" id="input-container">
+        <h1>Rencanakan Liburan Anda</h1>
+        <p class="subtitle">Dapatkan rekomendasi destinasi wisata sesuai dengan anggaran dan preferensi Anda</p>
+        
+        <form id="holiday-form">
+            <div class="form-group">
+                <label for="budget">Total Budget Liburan (Rp)</label>
+                <input type="number" id="budget" required min="100000" placeholder="Contoh: 2000000">
+            </div>
+            
+            <div class="form-group">
+                <label for="duration">Lama Liburan (hari)</label>
+                <input type="number" id="duration" required min="1" max="30" placeholder="Contoh: 3">
+            </div>
+            
+            <div class="form-group">
+                <label for="transport">Estimasi Biaya Transportasi (Rp)</label>
+                <input type="number" id="transport" required min="0" placeholder="Contoh: 300000">
+            </div>
+            
+            <div class="form-group">
+                <label for="accommodation">Estimasi Biaya Akomodasi (Rp)</label>
+                <input type="number" id="accommodation" required min="0" placeholder="Contoh: 500000">
+            </div>
+            
+            <div class="form-group">
+                <label for="activity">Jenis Aktivitas yang Disukai</label>
+                <select id="activity" required>
+                    <option value="">Pilih Aktivitas</option>
+                    <option value="alam">Alam</option>
+                    <option value="kuliner">Kuliner</option>
+                    <option value="belanja">Belanja</option>
+                    <option value="budaya">Budaya</option>
+                    <option value="campuran">Campuran</option>
                 </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="places">Jumlah Tempat Wisata yang Ingin Dikunjungi</label>
+                <input type="number" id="places" required min="1" max="10" placeholder="Contoh: 3">
+            </div>
+            
+            <div class="form-group">
+                <label for="notes">Keterangan Tambahan (opsional)</label>
+                <textarea id="notes" placeholder="Contoh: Saya ingin wisata alam dengan pemandangan indah"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Dapatkan Rekomendasi</button>
+        </form>
+    </div>
 
-                <label for="transportation">Estimasi biaya transportasi & akomodasi</label>
-                <input type="text" id="transportation" name="transportation"
-                    placeholder="Masukkan Estimasi biaya transportasi & akomodasi..." required>
-
-                <label for="places">Jumlah tempat wisata yang ingin dikunjungi</label>
-                <input type="number" id="places" name="places"
-                    placeholder="Masukkan Jumlah tempat wisata yang ingin dikunjungi..." required>
-
-                <label for="notes">Keterangan Tambahan</label>
-                <textarea id="notes" name="notes" placeholder="Masukkan catatan kamu disini..." rows="4"></textarea>
-
-                <label>Aktivitas Favorit</label>
-                <div class="activities">
-                    <label><input type="checkbox" name="activities" value="Jelajah Alam"> Jelajah Alam</label>
-                    <label><input type="checkbox" name="activities" value="Wisata Kuliner"> Wisata Kuliner</label>
-                    <label><input type="checkbox" name="activities" value="Berkunjung ke Tempat Sejarah"> Berkunjung ke
-                        Tempat Sejarah</label>
-                </div>
-
-                <div class="form-buttons">
-                    <button type="reset" class="reset-btn">Reset</button>
-                    <button type="submit" class="submit-btn">Temukan Rekomendasi</button>
-                </div>
-            </form>
-        </div>
     </section>
     <!--====================================== Form Modal end ======================================-->
 

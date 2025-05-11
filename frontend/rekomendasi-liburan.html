@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rekomendasi Liburan</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media_query.css" />
+</head>
+
+<body>
+    <!--====================================== Rekomendasi Liburan Start ======================================-->
+    <section>
+        <nav class="navigation-recomendation">
+            <a href="#" class="nav-link">
+                <span class="arrow">&lt;</span>
+                Rekomendasi Destinasi
+            </a>
+        </nav>
+
+            <div class="resultContainer" id="result-container" style="display: block;">
+                <div class="header-section">
+                    <h1>Rekomendasi Liburan Anda</h1>
+                    <div class="summary-card">
+                        <div class="summary-item">
+                            <span class="summary-label">Total Budget</span>
+                            <span class="summary-value" id="total-budget-display"></span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Kategori</span>
+                            <span class="summary-value" id="category-display"></span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Durasi</span>
+                            <span class="summary-value" id="duration-display"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h2>Filter Rekomendasi</h2>
+                    <div class="filter-group">
+                        <div class="filter-item">
+                            <label for="location-filter">Lokasi</label>
+                            <select id="location-filter">
+                                <option value="semua">Semua Lokasi</option>
+                                <option value="jawa">Jawa</option>
+                                <option value="bali">Bali</option>
+                                <option value="sumatera">Sumatera</option>
+                                <option value="sulawesi">Sulawesi</option>
+                                <option value="kalimantan">Kalimantan</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-item">
+                            <label for="category-filter">Kategori Wisata</label>
+                            <select id="category-filter">
+                                <option value="semua">Semua Kategori</option>
+                                <option value="hemat">Hemat</option>
+                                <option value="standar">Standar</option>
+                                <option value="mewah">Mewah</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-item">
+                            <label for="rating-filter">Penilaian Minimal</label>
+                            <select id="rating-filter">
+                                <option value="0">Semua</option>
+                                <option value="3">3★ ke atas</option>
+                                <option value="4">4★ ke atas</option>
+                                <option value="5">5★</option>
+                            </select>
+                        </div>
+
+                        <button id="apply-filter" class="filter-btn">Terapkan Filter</button>
+                    </div>
+                </div>
+
+                <div class="recommendation-section">
+                    <h2>Destinasi Rekomendasi</h2>
+                    <div id="recommendation-list" class="recommendation-list">
+                        <!-- Tempat wisata akan ditampilkan di sini -->
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!--====================================== Rekomendasi Liburan End ======================================-->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
